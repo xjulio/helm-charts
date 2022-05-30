@@ -16,7 +16,6 @@ jobs:
           files: |
             README.md
       - name: copy README.md
-        if: steps.changed_files.outputs.files_changed == 'true'
         run: |
           cp -f README.md ${{ runner.temp }}/README.md
       - uses: actions/checkout@v2
