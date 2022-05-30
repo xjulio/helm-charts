@@ -25,11 +25,11 @@ jobs:
         with:
           version: v3.8.1
 
-      - name: Add dependency chart repos
-        run: |
-          helm repo add xjulio https://xjulio.github.io/helm-charts
-
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Add dependency chart repos
+        run: |
+          helm repo add xjulio https://xjulio.github.io/helm-charts
