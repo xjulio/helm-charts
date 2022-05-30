@@ -1,17 +1,24 @@
 on:
   push:
     branches:
-      - 'main'
+      - "main"
     paths:
-      - 'README.md'
+      - "README.md"
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Verify Dockerfile changed
+        uses: tj-actions/verify-changed-files@v5.5
+        id: changed_files
+        with:
+          files: |
+            README.md
       - run: |
           cp -f README.md ${{ runner.temp }}/README.md
       - uses: actions/checkout@v2
+        if: steps.changed_files.outputs.files_changed == 'true'
         with:
           ref: gh-pages
       - run: |
