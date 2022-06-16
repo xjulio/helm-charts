@@ -15,7 +15,7 @@ Once Helm is set up properly, add the repo as follows:
 helm repo add xjulio https://xjulio.github.io/helm-charts
 ```
 
-You can then run `helm search repo prometheus-community` to see the charts.
+You can then run `helm search repo xjulio` to see the charts.
 
 ## Contributing
 
