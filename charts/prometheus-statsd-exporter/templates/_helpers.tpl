@@ -35,7 +35,7 @@ Common labels
 */}}
 {{- define "prometheus-statsd-exporter.labels" -}}
 helm.sh/chart: {{ include "prometheus-statsd-exporter.chart" . }}
-release: {{.Release.Name }}
+release: {{ .Release.Name }}
 {{ include "prometheus-statsd-exporter.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
