@@ -1,5 +1,29 @@
 apiVersion: v1
 entries:
+  prometheus-statsd-exporter:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus-statsd-exporter
+    apiVersion: v2
+    appVersion: 0.22.1
+    created: "2022-06-23T10:44:52.249134083Z"
+    description: A Helm chart for prometheus stats-exporter
+    digest: 7c01e41142ab77836548d597d86f87266961e0f1ab8eb772a1371b3380dc62c3
+    home: https://github.com/prometheus/statsd_exporter
+    keywords:
+    - statsd
+    - prometheus
+    - exporter
+    maintainers:
+    - email: d@rovergulf.net
+      name: scDisorder
+    name: prometheus-statsd-exporter
+    sources:
+    - https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus-statsd-exporter
+    urls:
+    - https://github.com/xjulio/helm-charts/releases/download/prometheus-statsd-exporter-0.4.2/prometheus-statsd-exporter-0.4.2.tgz
+    version: 0.4.2
   ssl-exporter:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -11,4 +35,4 @@ entries:
     urls:
     - https://github.com/xjulio/helm-charts/releases/download/ssl-exporter-2.4.1/ssl-exporter-2.4.1.tgz
     version: 2.4.1
-generated: "2022-05-30T10:26:09.666587347Z"
+generated: "2022-06-23T10:44:52.372995856Z"
